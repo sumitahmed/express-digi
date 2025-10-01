@@ -1,0 +1,24 @@
+Express is a simple library which makes yuur life a lil bit easier to go ahead and write routes for it...like /insta, /x etc, whenevr you want to take the user on your websites and what the response we need to send, thats where Exress helps us a lil bit...
+
+all that we write for authentication logic, authorization logic, all the business logic, what happens with the data, is the data valid.
+should i give a response back, should i not give a response back.
+should i give all okay response......ALL THAT HAPPENS IN CORE JAVA SCRIPT VIA THE EXPRESS
+
+EXPRESS IS A FAST UNOPINIONATED MINIMAL "WEB FRAMEWORK FOR NODE JS"
+
+mongoose is a ORM (ODM) , to keep my data structure into a structure and then talk to the database, i need some guy in bwn, thats my middle man, thats what mongoose is
+
+* mongoose and MongoDB, they are heavenly matched
+and so is postgres prisma/drizzle
+
+image.png explanation: 
+The web req will come to my express application, that runs in the node enviorment in that ill be writing my auth logic and business logic,
+in case thers need of it, in case my express application needs to talk to database, to get some data or save some data,
+We'll use a layer of mongoose in bwn, and that mongoose will further talk to MongoDB
+
+package.json: this is the file which is the first entry point whenevr your application gets started by the node.
+This is where it checks all the setting that
+what i need to install and all those things
+this is checked by the production applications aswell
+
+Using nodeman, will resart the server whenevr i make changes
