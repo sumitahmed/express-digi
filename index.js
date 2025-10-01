@@ -1,8 +1,12 @@
+//Step 1: require('dotenv').config()
+//require('dotenv').config()
+import 'dotenv/config'
 import express from 'express'
 
 const app = express()
 
-const port = 3000
+//Step 2: whenver you are defining the port, use process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 // app.get("/", (req, res) =>{
 //     res.send("I love sanina azaz")
@@ -92,6 +96,14 @@ app.delete('/teas/:id', (req, res) => {
     return res.status(204).send('deleted')
 })
 
+//this cant work if you deploy on a platform, cause thres some obvious reasons for that, 1. You are suposed to use some of the env variables,
+//you cant go onto a platform and use any of their machine port, some people might be using port 3000, some 4000, then its going to be distributes in sub ports, sub routes, and what not 
+//The point is due to some security reasons, this stuff are sensitive, they need to keep hidden ,
+//ex: your database connection string, sometimes its contains username and password, you dont want to expose that to the public. Maybe you are using OpenAi keys, 
+
+//Soln: use .env 
+//NOTE: in the latest version of node, you dont need to install dotenv package, its already there
+//But, in the deployment in the production, such aggresive ness in having the latest version and most modern version of node is not a good idea, and most of these are providers dont even support the latest version of node
 app.listen(port, () => {
     console.log(`server is running on port: ${port}...`)
 
